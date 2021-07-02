@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,6 +56,10 @@
 		9EEF69F61D2C343E00C6E603 /* KVOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEF69F51D2C343E00C6E603 /* KVOTests.swift */; };
 		AB3D45EF20E41751005E51FC /* UtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3D45EE20E41751005E51FC /* UtilitiesTests.swift */; };
 		AB7F6F2520D4CCFD003AA632 /* MetricsCallbackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7F6F2420D4CCFD003AA632 /* MetricsCallbackTests.swift */; };
+		F78B46BC268EB728006A029A /* CocoaAsyncSocket.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78B46BA268EB728006A029A /* CocoaAsyncSocket.xcframework */; };
+		F78B46BD268EB728006A029A /* CocoaAsyncSocket.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F78B46BA268EB728006A029A /* CocoaAsyncSocket.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F78B46BE268EB728006A029A /* PMJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78B46BB268EB728006A029A /* PMJSON.xcframework */; };
+		F78B46BF268EB728006A029A /* PMJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F78B46BB268EB728006A029A /* PMJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,21 @@
 			remoteInfo = PMHTTP;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F78B46C0268EB728006A029A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F78B46BF268EB728006A029A /* PMJSON.xcframework in Embed Frameworks */,
+				F78B46BD268EB728006A029A /* CocoaAsyncSocket.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A3BE2C5210EE4900044D2D3 /* URLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocol.swift; sourceTree = "<group>"; };
@@ -127,6 +146,8 @@
 		9EEF69F51D2C343E00C6E603 /* KVOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVOTests.swift; sourceTree = "<group>"; };
 		AB3D45EE20E41751005E51FC /* UtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesTests.swift; sourceTree = "<group>"; };
 		AB7F6F2420D4CCFD003AA632 /* MetricsCallbackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsCallbackTests.swift; sourceTree = "<group>"; };
+		F78B46BA268EB728006A029A /* CocoaAsyncSocket.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaAsyncSocket.xcframework; path = Carthage/Build/CocoaAsyncSocket.xcframework; sourceTree = "<group>"; };
+		F78B46BB268EB728006A029A /* PMJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PMJSON.xcframework; path = Carthage/Build/PMJSON.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E55BD721C5FE25F001CC5D6 /* CFNetwork.framework in Frameworks */,
+				F78B46BE268EB728006A029A /* PMJSON.xcframework in Frameworks */,
+				F78B46BC268EB728006A029A /* CocoaAsyncSocket.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +202,7 @@
 				9E7DDF231C18F2B600EA43AD /* PMHTTP */,
 				9E7DDF2F1C18F2B600EA43AD /* PMHTTPTests */,
 				9E7DDF221C18F2B500EA43AD /* Products */,
+				F78B46B9268EB727006A029A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,6 +287,15 @@
 			name = "HTTP Server";
 			sourceTree = "<group>";
 		};
+		F78B46B9268EB727006A029A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F78B46BA268EB728006A029A /* CocoaAsyncSocket.xcframework */,
+				F78B46BB268EB728006A029A /* PMJSON.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -288,6 +321,7 @@
 				9E7DDF1D1C18F2B500EA43AD /* Frameworks */,
 				9E7DDF1E1C18F2B500EA43AD /* Headers */,
 				9E7DDF1F1C18F2B500EA43AD /* Resources */,
+				F78B46C0268EB728006A029A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,7 +339,6 @@
 				9E7DDF271C18F2B600EA43AD /* Sources */,
 				9E7DDF281C18F2B600EA43AD /* Frameworks */,
 				9E7DDF291C18F2B600EA43AD /* Resources */,
-				9E49DF091C1FA773004FDCAD /* Copy Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -373,26 +406,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9E49DF091C1FA773004FDCAD /* Copy Carthage Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				PMJSON,
-				CocoaAsyncSocket,
-			);
-			name = "Copy Carthage Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "case \"$PLATFORM_NAME\" in\nmacosx) plat=Mac;;\niphone*) plat=iOS;;\nwatch*) plat=watchOS;;\ntv*) plat=tvOS;;\nappletv*) plat=tvOS;;\n*) echo \"error: Unknown PLATFORM_NAME: $PLATFORM_NAME\"; exit 1;;\nesac\nfor (( n = 0; n < SCRIPT_INPUT_FILE_COUNT; n++ )); do\nVAR=SCRIPT_INPUT_FILE_$n\nframework=$(basename \"${!VAR}\")\nexport SCRIPT_INPUT_FILE_$n=\"$SRCROOT\"/Carthage/Build/$plat/\"$framework\".framework\ndone\n\n${CARTHAGE:-/usr/local/bin/carthage} copy-frameworks || exit\n\nfor (( n = 0; n < SCRIPT_INPUT_FILE_COUNT; n++ )); do\nVAR=SCRIPT_INPUT_FILE_$n\nsource=${!VAR}.dSYM\ndest=${BUILT_PRODUCTS_DIR}/$(basename \"$source\")\nditto \"$source\" \"$dest\" || exit\ndone\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E7DDF1C1C18F2B500EA43AD /* Sources */ = {
